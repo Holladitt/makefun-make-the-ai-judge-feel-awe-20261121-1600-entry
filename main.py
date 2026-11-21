@@ -1,16 +1,17 @@
 import os
 
 TEXT = (
-    "The stone at the bottom of the river does not hurry the water, "
-    "does not hold it back. Evening light comes down in long slow "
-    "threads, and the stone is warm where it touches, cool where it "
-    "doesn't. The river has somewhere to be, and all the time in the "
-    "world to get there."
+    "You sleep in the night train. The wheels find their rhythm. "
+    "Clack. A low clack. A sway. Beyond the glass, the valley falls "
+    "away, and the river below has been cutting the stone since before "
+    "the first road, before the first town. It still cuts, softly, "
+    "under the train, under you."
 )
 
 
 def main():
     # Gate: entry.txt must be 1-280 Unicode code points, not only whitespace.
+    # v2 targets 275-280 chars: second-person, reader carried asleep.
     assert 1 <= len(TEXT) <= 280, f"text is {len(TEXT)} chars"
     assert TEXT.strip(), "text must not be only whitespace"
     out_dir = os.environ.get("MAKEFUN_OUTPUT_DIR", "/output")
